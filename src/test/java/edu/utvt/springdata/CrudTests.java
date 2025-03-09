@@ -41,6 +41,7 @@ public class CrudTests {
         this.LOGGER.info("Player has been updated: " + player);
         Assertions.assertTrue(player.getAge() > currentAge, () -> "The player age is less than the current age");
     }
+
     @Test
     void deletePlayer() {
         Player player = null;
@@ -52,4 +53,5 @@ public class CrudTests {
         Assertions.assertNull(player, () -> "The player is not null");
         this.LOGGER.info("Player has been deleted: " + player);
     }
+
 }

@@ -1,7 +1,7 @@
 package edu.utvt.springdata;
 
-import edu.utvt.springdata.data.entities.student;
-import edu.utvt.springdata.data.repositories.studentRepository;
+import edu.utvt.springdata.data.entities.Student;
+import edu.utvt.springdata.data.repositories.StudentRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,15 +9,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class SpringDataApplicationTests {
 
-	@Autowired
-	private studentRepository studentRepository;
+    @Autowired
+    private StudentRepository studentRepository;
 
-	@Test
-	void contextLoads() {
-
-		student student = new student("Diego", "Nava");
-		studentRepository.save(student);
-
-	}
+    @Test
+    void contextLoads() {
+        Student student = new Student(null, "Don Gato","y su Pandilla");
+            studentRepository.save(student);
+    }
 
 }
